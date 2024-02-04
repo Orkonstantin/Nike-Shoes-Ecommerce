@@ -53,14 +53,14 @@ export default function CategoriesPage({ products }) {
           <Center>
             <Title>All Categories</Title>
             <StyledDiv>
-              <h2>Men's Shoes</h2>
+              <h2>Men&apos;s Shoes</h2>
               <StyledLink href={"/categories/men"}>Go To Page</StyledLink>
             </StyledDiv>
             <ProductsGrid products={latestMenProducts} />
             <br />
             <br />
             <StyledDiv>
-              <h2>Women's Shoes</h2>
+              <h2>Women&apos;s Shoes</h2>
               <StyledLink href={"/categories/women"}>Go To Page</StyledLink>
             </StyledDiv>
             <ProductsGrid products={latestWomenProducts} />
