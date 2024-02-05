@@ -1,6 +1,7 @@
+import { CartContextProvider } from "@/components/CartContext";
+import { Analytics } from "@vercel/analytics/react";
 import { Helmet } from "react-helmet";
 import { createGlobalStyle } from "styled-components";
-import { CartContextProvider } from "@/components/CartContext";
 
 const GlobalStyles = createGlobalStyle`
   body{
@@ -23,6 +24,7 @@ export default function App({ Component, pageProps }) {
       <GlobalStyles />
       <CartContextProvider>
         <Component {...pageProps} />
+        <Analytics />
       </CartContextProvider>
     </>
   );
