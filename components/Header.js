@@ -1,7 +1,7 @@
 import { CartContext } from "@/components/CartContext";
 import Center from "@/components/Center";
 import Dropdown from "@/components/Dropdown";
-import BarsIcon from "@/components/icons/Bars";
+
 import { useContext, useState } from "react";
 import {
   Logo,
@@ -12,6 +12,7 @@ import {
   StyledHeader,
   StyledNav,
   Wrapper,
+  StyledBarsIcon,
 } from "./styles/HeaderStyles";
 
 export default function Header() {
@@ -52,7 +53,7 @@ export default function Header() {
             </NavLink>
           </StyledNav>
           <NavButton onClick={() => setMobileNavActive((prev) => !prev)}>
-            <BarsIcon />
+            <StyledBarsIcon />
           </NavButton>
         </Wrapper>
       </Center>

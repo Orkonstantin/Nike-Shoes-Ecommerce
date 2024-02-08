@@ -1,5 +1,19 @@
 import Link from "next/link";
 import styled from "styled-components";
+import BarsIcon from "@/components/icons/Bars";
+
+export const StyledBarsIcon = styled(BarsIcon)`
+  width: 4vw;
+  height: 4vw;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 600px) {
+    width: 6vw;
+    height: 6vw;
+  }
+`;
 
 export const NikeIcon = styled.div`
   padding-right: 10px;

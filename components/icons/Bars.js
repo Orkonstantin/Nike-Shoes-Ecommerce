@@ -1,4 +1,4 @@
-export default function BarsIcon({ className = "w-6 h-6" }) {
+export default function BarsIcon({ className }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
