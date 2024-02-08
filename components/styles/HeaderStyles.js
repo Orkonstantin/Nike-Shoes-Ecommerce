@@ -80,7 +80,7 @@ export const NavLink = styled(Link)`
   display: block;
   color: #aaa;
   text-decoration: none;
-  padding: 10px 0px;
+  padding: 10px 10px 10px 0;
   @media screen and (min-width: 768px) {
     padding: 0;
   }
@@ -92,8 +92,6 @@ export const NavLink = styled(Link)`
 
 export const NavButton = styled.button`
   background-color: transparent;
-  width: 30px;
-  height: 30px;
   border: 0;
   color: white;
   cursor: pointer;
