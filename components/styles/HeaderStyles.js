@@ -1,6 +1,7 @@
+import BarsIcon from "@/components/icons/Bars";
+import CartIcon from "@/components/icons/CartIcon";
 import Link from "next/link";
 import styled from "styled-components";
-import BarsIcon from "@/components/icons/Bars";
 
 export const StyledBarsIcon = styled(BarsIcon)`
   width: 4vw;
@@ -13,17 +14,6 @@ export const StyledBarsIcon = styled(BarsIcon)`
     width: 6vw;
     height: 6vw;
   }
-`;
-
-export const NikeIcon = styled.div`
-  padding-right: 10px;
-  display: flex;
-  align-items: center;
-`;
-
-export const NikeTitle = styled.div`
-  align-items: center;
-  display: flex;
 `;
 
 export const StyledHeader = styled.header`
@@ -45,6 +35,7 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 20px 0;
+  align-items: center;
 `;
 
 export const StyledNav = styled.nav`
@@ -103,5 +94,60 @@ export const NavButton = styled.button`
   &:hover {
     background-color: #3c3c3c;
     border-radius: 10px;
+  }
+`;
+
+export const CenteredNavLink = styled(NavLink)`
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: transparent;
+  border: 0;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+  &:hover {
+    background-color: transparent;
+  }
+`;
+
+export const LogoAndNavLinkContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+`;
+
+export const CartIconHeader = styled(CartIcon)`
+  width: 4vw;
+  height: 4vw;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  @media (max-width: 700px) {
+    width: 5vw;
+    height: 5vw;
+  }
+  @media (max-width: 600px) {
+    width: 6vw;
+    height: 6vw;
+  }
+  @media (max-width: 480px) {
+    width: 7vw;
+    height: 7vw;
+  }
+  @media (max-width: 380px) {
+    width: 8vw;
+    height: 8vw;
+  }
+  @media (max-width: 320px) {
+    width: 9vw;
+    height: 9vw;
   }
 `;
