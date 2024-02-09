@@ -123,31 +123,11 @@ export const LogoAndNavLinkContainer = styled.div`
 `;
 
 export const CartIconHeader = styled(CartIcon)`
-  width: 4vw;
-  height: 4vw;
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
   position: relative;
-  @media (max-width: 700px) {
-    width: 5vw;
-    height: 5vw;
-  }
-  @media (max-width: 600px) {
-    width: 6vw;
-    height: 6vw;
-  }
-  @media (max-width: 480px) {
-    width: 7vw;
-    height: 7vw;
-  }
-  @media (max-width: 380px) {
-    width: 8vw;
-    height: 8vw;
-  }
-  @media (max-width: 320px) {
-    width: 9vw;
-    height: 9vw;
-  }
+  width: 30px;
+  height: 30px;
 `;
