@@ -3,7 +3,8 @@ import Center from "@/components/Center";
 import Dropdown from "@/components/Dropdown";
 import NikeIcon from "@/components/icons/NikeIcon";
 import { useContext, useEffect, useState } from "react";
-import useMediaQuery from "../hooks/useMediaQuery";
+import CartCountBubble from "@/components/CartCountBubble";
+import CartPreview from "@/components/CartPreview";
 import {
   Logo,
   NavButton,
@@ -16,13 +17,12 @@ import {
   LogoAndNavLinkContainer,
   CartIconHeader,
 } from "./styles/HeaderStyles";
-import CartCountBubble from "@/components/CartCountBubble";
 
 export default function Header() {
   const { cartProducts } = useContext(CartContext);
   const [mobileNavActive, setMobileNavActive] = useState(false);
-  const isMobile = useMediaQuery("(max-width: 767px)");
   const [cartCount, setCartCount] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     setCartCount(
@@ -37,9 +37,14 @@ export default function Header() {
             <Logo href={"/"}>
               <NikeIcon />
             </Logo>
-            <CenteredNavLink href={"/cart"}>
+            <CenteredNavLink
+              href={"/cart"}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
               <CartIconHeader />
               <CartCountBubble count={cartCount} />
+              {isHovered && <CartPreview />}
             </CenteredNavLink>
           </LogoAndNavLinkContainer>
           <StyledNav mobileNavActive={mobileNavActive}>

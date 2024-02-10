@@ -64,7 +64,7 @@ export const moveToCartSmallScreen = keyframes`
     opacity: 1;
   }
   100% {
-    transform: translate(30vw, -80vh);
+    transform: translate(-20vw, -80vh);
     opacity: 0;
   }
 `;

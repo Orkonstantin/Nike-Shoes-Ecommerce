@@ -32,13 +32,18 @@ export default function ProductPage({ product }) {
   );
   const [selectedSize, setSelectedSize] = useState(Sizes[0]); // initialize with the first size
 
-  const [windowWidth, setWindowWidth] = useState(
-    typeof window !== "undefined" ? window.innerWidth : 0
-  );
+  const [windowWidth, setWindowWidth] = useState(() => {
+    if (typeof window !== "undefined") {
+      return window.innerWidth >= 0 ? window.innerWidth : 0;
+    }
+    return 0;
+  });
   const AnimatedButton = styled(Button)`
     &.animate {
       animation: ${(props) =>
-          props.windowWidth > 768 ? moveToCartBigScreen : moveToCartSmallScreen}
+          props.windowWidth >= 768
+            ? moveToCartBigScreen
+            : moveToCartSmallScreen}
         1s forwards;
     }
   `;
@@ -46,14 +51,14 @@ export default function ProductPage({ product }) {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
-
+    // console.log(windowWidth);
     window.addEventListener("resize", handleResize);
 
     // Clean up the event listener when the component is unmounted
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [windowWidth]);
   return (
     <>
       <PageContainer>
