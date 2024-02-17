@@ -20,6 +20,7 @@ const WhiteBox = styled(Link)`
     max-width: 100%;
     max-height: 150px;
     // max-height: 450px;
+    border-radius: 10px;
   }
   background-color: #f5f5f5;
 `;

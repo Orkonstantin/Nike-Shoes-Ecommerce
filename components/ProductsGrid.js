@@ -5,14 +5,6 @@ const StyledProductsGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 25px;
-  // @media screen and (max-width: 515px) {
-  //   &.long-title {
-  //     grid-template-columns: 1fr;
-  //   }
-  // }
-  // @media screen and (min-width: 768px) {
-  //   grid-template-columns: 1fr 1fr 1fr;
-  // }
   @media screen and (min-width: 1024px) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
