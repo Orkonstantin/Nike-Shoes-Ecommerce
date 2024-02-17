@@ -52,7 +52,7 @@ export const StyledNav = styled.nav`
   right: 0;
   padding: 70px 20px 20px;
   background-color: #222;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 769px) {
     visibility: visible;
     opacity: 1;
     display: flex;
@@ -72,7 +72,7 @@ export const NavLink = styled(Link)`
   color: #aaa;
   text-decoration: none;
   padding: 10px 10px 10px 0;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 769px) {
     padding: 0;
   }
   &:hover {
@@ -88,7 +88,7 @@ export const NavButton = styled.button`
   cursor: pointer;
   position: relative;
   z-index: 3;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 769px) {
     display: none;
   }
   &:hover {

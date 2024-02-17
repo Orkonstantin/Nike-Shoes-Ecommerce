@@ -15,12 +15,12 @@ const BigImage = styled.img`
   //
   cursor: zoom-in;
   transform: ${(props) =>
-    props.isZoomed ? "scale(2.1) translateY(17%)" : "scale(1)"};
+    props.isZoomed ? "scale(2.2) translateY(17%)" : "scale(1)"};
   transition: transform 0.3s ease-in-out;
 
   @media screen and (max-width: 768px) {
     transform: ${(props) =>
-      props.isZoomed ? "scale(3) translateY(24%)" : "scale(1)"};
+      props.isZoomed ? "scale(2) translateY(16%)" : "scale(1)"};
   }
 `;
 
